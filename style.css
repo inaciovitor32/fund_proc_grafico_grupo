@@ -22,6 +22,16 @@ h4 {
   font-size: 1.5rem;
 }
 
+a {
+  text-decoration: none;
+  color: #1a1c18;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #56624b;
+}
+
 body {
   font-size: 1.125rem;
   font-weight: 400;
@@ -194,4 +204,14 @@ hr {
   width: 48px;
   height: 48px;
   background: url(arrow_back.svg);
+}
+
+.lab_image {
+  display: block;
+  margin: auto;
+  width: 500px;
+}
+
+.legenda {
+  text-align: center;
 }
