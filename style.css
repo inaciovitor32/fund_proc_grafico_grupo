@@ -26,6 +26,7 @@ body {
   font-size: 1.125rem;
   font-weight: 400;
   color: #1a1c18;
+  line-height: 1.5;
 }
 
 .container {
@@ -89,6 +90,10 @@ main {
   grid-column: 2/3;
   grid-row: 2/3;
   padding: 32px;
+}
+
+article {
+  line-height: 1.8;
 }
 
 footer {
@@ -169,4 +174,24 @@ hr {
 
 .icon {
   height: 56px;
+}
+
+.back-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 100%;
+}
+
+.back-button:hover {
+  background-color: #cddbc0;
+}
+
+.back-icon {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background: url(arrow_back.svg);
 }
