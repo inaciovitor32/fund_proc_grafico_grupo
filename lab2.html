@@ -60,82 +60,74 @@
                 <span class="back-icon"></span>
             </a>
 
-            <h1 class="title">Laboratório 1 - OpenGL Linux</h1>
+            <h1 class="title">Laboratório 2 - Intro OpenGL</h1>
             <p>
                 <i>
-                    Atualizado em 06/10/2022 ás 16:40
+                    Atualizado em 10/10/2022 ás 18:50
                 </i>
             </p>
 
             <section>
-                <h3>Preparando o ambiente de desenvolvimento</h3>
+                <h3>Introdução à Estrutura de OpenGL</h3>
 
                 <article>
                     <p>
-                        Para que fosse possível a realização das atividades práticas propostas no laboratório do dia
-                        29/09/2022, era necessário antes de tudo a configuração de um ambiente de desenvolvimento Linux.
-                        Tal procedimento deu-se através das seguintes etapas:
+                      Este laboratório teve como objetivo apresentar um ambiente para programação em
+                      linguagem C++ e a biblioteca OpenGL, sendo a mesma escolhida devido à praticidade proporcionada e à grande
+                      difusão desta ferramenta no meio acadêmico.
+                      Este roteiro foi executado no sistema Ubuntu-linux instalado no laboratório
+                      didático.
                     </p>
 
-                    <ul>
-                        <li>Criação de um usuário com permissões de administrador no Ubuntu Linux.</li>
-                        <li>Instalação das dependências de desenvolvimento C/C++ incluídas no pacote build-essential no
-                            repositório do Ubuntu Linux.</li>
-                        <li>Instalação das dependências de desenvolvimento da API gráfica OpenGL que é implementada no
-                            Ubuntu Linux através da biblioteca Mesa e do servidor gráfico X11 e que estão incluídas nos
-                            seguintes pacotes:
+                    
+                </article>
+            </section>
+
+            <section>
+                <h3>Instalação da biblioteca FreeGLUT no Ubuntu-linus</h3>
+
+                <article>
+                    <p>
+                      A instalação da biblioteca FreeGLUT no Ubuntu-linux deverá ser realizada
+                      conforme o mostrado no Laboratório 1.
+                    </p>
+
+                    <p>
+                      A Compilação e execução dos programas OpenGL, serão realizadas conforme Laboratório1.
+                      Nenhuma IDE foi utilizada, apenas comandos no terminal do Ubuntu-Linux.
+                    </p>
+                      <ul>
+                        
+                        <li>Exemplo de compilação via linha comando:
 
                             <ul>
-                                <li>libx11-dev</li>
-                                <li>libxmu-dev</li>
-                                <li>libxi-dev</li>
-                                <li>libglu1-mesa</li>
-                                <li>libglu1-mesa-dev</li>
+                                <li>gcc -o test lesson5.cpp -lglut -lGL -lGLU</li>
+                                <li>./test</li>
+                                
                             </ul>
                         </li>
-                        <li>Instalação de um ambiente para o desenvolvimento de código (IDE). Como IDE a equipe utilizou
-                            o Visual Studio Code da Microsoft devido a sua facilidade de uso por oferecer plugins úteis
-                            para a escrita de código em C/C++ e OpenGL.</li>
-                    </ul>
+                      
+                      </ul>
                 </article>
             </section>
 
             <section>
-                <h3>Introdução a programação OpenGL</h3>
+                <h3>Resultados dos Exercícios para Entregar</h3>
+                <img src="lab2_01_compilado.png" alt="Exercício 1" width ="150" height ="150" class="lab_image">
+                <p class="legenda"><i>Figura 1 - Resultado do exercício 1.</i></p>
 
-                <article>
-                    <p>
-                        A prática laboratorial tinha como objetivo a introdução dos alunos da disciplina de Fundamentos
-                        de Processamento Gráfico a programação de gráficos computadorizados com OpenGL.
-                    </p>
-
-                    <p>
-                        A prática consistia em editar e compilar um arquivo de exemplo fornecido pelo professor através
-                        do Moodle e observar os resultados. Embora o programa já estivesse pronto, o objetivo
-                        específico desta prática é a familiarização do aluno com a estrutura de um projeto OpenGL e com
-                        os comandos que essa API adiciona a linguagem C/C++, como forma de se adquirir conhecimento para
-                        as atividades práticas seguintes.
-                    </p>
-                </article>
-            </section>
-
-            <section>
-                <h3>Resultados</h3>
-                <img src="01.png" alt="Laboratório Imagem 2" class="lab_image">
-                <p class="legenda"><i>Imagem 1 - Guilherme Braz de Lima.</i></p>
-                <img src="02.png" alt="Laboratório Imagem 1" class="lab_image">
-                <p class="legenda"><i>Imagem 2 - Jennifer Santos Campos.</i></p>
-                <img src="03.png" alt="Laboratório Imagem 4" class="lab_image">
-                <p class="legenda"><i>Imagem 3 - João Victor Martins Reis.</i></p>
-                <img src="04.png" alt="Laboratório Imagem 4" class="lab_image">
-                <p class="legenda"><i>Imagem 4 - Vitor Inácio da Silva.</i></p>
+                <img src="lab2_aplicação.png" alt="Exercício 2" width ="150" height ="150" class="lab_image">
+                <p class="legenda"><i>Figura 2 - Resultado do exercício 2.</i></p>
+                
             </section>
 
             <section>
                 <h3>Códigos Fonte</h3>
 
                 <article>
-                    <a href="lab01.cpp">lab01.cpp</a>
+                    <a href="lab2_ex2_final.cpp">lab02.cpp</a>
+                
+                    <a href="lab02-01.cpp">lab02_1.cpp</a>
                 </article>
             </section>
 
@@ -143,8 +135,7 @@
                 <h3>Referências</h3>
 
                 <article>
-                    <a href="ESZI017__lab01_opengl_linux_x.pdf">Roteiro inicial para o uso do Ubuntu Linux nas aulas
-                        práticas</a>
+                    <a href="ESZI017__lab02_OpenGLintro__x.pdf">Introdução à Estrutura de OpenGL</a>
                 </article>
             </section>
         </main>
