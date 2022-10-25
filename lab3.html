@@ -71,17 +71,149 @@
             </nav>
         </aside>
 
+
         <main>
             <a href="index.html" title="Voltar" class="back-button">
                 <span class="back-icon"></span>
             </a>
 
-            <h1 class="title">Laboratório 3 – Modelagem e Transformações 2D</h1>
+            <h1 class="title">Laboratório 3 - Modelagem e Transformações 2D</h1>
             <p>
                 <i>
-                    Atualizado em 20/10/2022 ás 13:18
+                    Atualizado em 25/10/2022 ás 18:50
                 </i>
             </p>
+
+            <section>
+                <h3>Introdução à Estrutura de OpenGL</h3>
+
+                <article>
+                    <p>
+                        O Laboratório visa executar alguns projetos, e verificar os conceitos
+                        sobre: modelamento, transformações (translação, rotação, e escalonamento), aspectos de
+                        programação de animação e interatividade (pelo teclado e mouse), e ainda grafos de cena
+                        (através do uso do Stack)
+                    </p>
+
+
+                </article>
+            </section>
+
+            <section>
+                <h3>Procedimentos detalhados executados no laboratório</h3>
+
+                <article>
+                    <p>
+                        Exercício 1:
+                    </p>
+
+                    <p>
+                        Foi Modificado o exemplo do 5º. Projeto: “robot.c” para adicionar alguns dedos no pulso do
+                        braço conforme solicitado. Foi Utilizado as funções glPushMatrix() e glPopMatrix() para
+                        salvar e restaurar a posição e orientação do sistema de coordenadas do pulso. Em que,
+                        foi necessario salvar a matriz corrente antes de posicionar cada dedo e restaurar a matriz
+                        corrente após cada dedo ter sido desenhado.
+                        Alem disso, foi necessário adicionar comandos novo no teclado para mover os dedos ''d','D','f'e
+                        'F'
+                        do braço do robo.
+                    </p>
+
+                    <section>
+
+                        <h3>Resultados dos Exercícios para Entregar</h3>
+                        <img src="comados_lab3_01.png" alt="Exercício 2 comandos" class="lab_image">
+                        <p class="legenda"><i>Figura 1 - Comandos para movimentar o Braço 1.</i></p>
+
+                        <img src="lab3_01.png" alt="Exercício 2 imagem" class="lab_image">
+                        <p class="legenda"><i>Figura 2 - Modelagem do Braço exercício 1.</i></p>
+
+                    </section>
+
+
+                    <p>
+                        Exercício 2:
+                    </p>
+
+                    <p>
+                        Foi feito uma composição de poligono para projetar o objeto a ser desenhado. Isto foi feito
+                        desenhando numa folha de papel quadriculado na qual , foi necessário dividir o
+                        objeto em triângulos e mandar desenha-los um por um. E Foi escrito uma função para desenhar este objeto por meio da composição de triângulos,
+                        de forma otimizada. A Figura (3) mostra o objeto escolhido
+                        para este exemplo, com os vértices devidamente numerados de 0 a 15: os vértices dos triangulos
+                        estão representados em vermelho.
+                    </p>
+
+                    <section>
+
+                        <img src="lab03_02_00.png" alt="Exercício 2" class="lab_image">
+                        <p class="legenda"><i>Figura 3  Desenho do poligono no papel quadriculado.</i></p>
+
+                        <img src="lab03_02.png" alt="Exercício 2" class="lab_image">
+                        <p class="legenda"><i>Figura 4 - Restultado do desenho em OpenGL.</i></p>
+
+                    </section>
+
+                    <p>
+                        Foi  feito uma função capaz de mover o objeto tenha e rotação controlado por 
+                        mouse e mudança de cores através de teclado, baseando-se nos
+                        exemplos desta aula
+                    </p>
+
+                    <section>
+
+                        <img src="lab03_02_01.png" alt="Exercício 2" class="lab_image">
+                        <p class="legenda"><i>Figura 5.1  Mumdança de cor através do teclado.</i></p>
+
+                        <img src="lab03_02_02.png" alt="Exercício 2" class="lab_image">
+                        <p class="legenda"><i> Figura 5.2  Mumdança de cor através do teclado.</i></p>
+
+                        <img src="lab03_02_03.png" alt="Exercício 2" class="lab_image">
+                        <p class="legenda"><i> Figura 5.2  Mudança de posição controlada pelo mouse.</i></p>
+
+                    </section>
+
+                    <ul>
+
+                        
+                            <h3>Analise e conclusão:</h3>
+
+                            <ul>
+                                <li> Utilizando os conceitos aprendidos na disciplina foi possivel aprofundar os fundamentos de 
+                                    modelamento de objetos 3D e de  transformações (translação, rotação, e escalonamento), aspectos de
+                                    programação de animação e interatividade (pelo teclado e mouse), e ainda grafos de cena
+                                    (através do uso do Stack). utilizando a linguagem C++ e a biblioteca OpenGL. 
+                                </li>
+
+                            </ul>
+                        
+
+                    </ul>
+                </article>
+            </section>
+
+            <section>
+                <h3>Códigos Fonte</h3>
+
+                <article>
+                    <ul>
+                        <li>
+                            <a href="lab3_ex1.cpp">lab3_ex1.cpp</a>
+                        </li>
+                        <li>
+                            <a href="lab3_ex2.cpp">lab3_ex2.cpp</a>
+                        </li>
+                    </ul>
+                </article>
+
+            </section>
+
+            <section>
+                <h3>Referências</h3>
+
+                <article>
+                    <a href="ESZI017__lab03_modelagem__x.pdf">Introdução à Estrutura de OpenGL</a>
+                </article>
+            </section>
         </main>
 
         <footer>
