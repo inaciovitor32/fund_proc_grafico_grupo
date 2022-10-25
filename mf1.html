@@ -51,7 +51,7 @@
                             Laboratório 2
                         </a>
                     </li>
-                     <li>
+                    <li>
                         <a href="lab3.html">
                             <span class="material-symbols-rounded">
                                 science
@@ -76,7 +76,7 @@
                 <span class="back-icon"></span>
             </a>
 
-            <h1 class="title">Seminário 1 - Modelagem Funcional</h1>
+            <h1 class="title">Seminário 1 - Relatório</h1>
             <p>
                 <i>
                     Atualizado em 18/10/2022 ás 20:23
@@ -193,20 +193,104 @@
             </section>
 
             <section>
+                <h3>Funcionamento do Projeto</h3>
+
+                <article>
+                    <p>
+                        Nesta primeira parte do projeto, focamos em conseguir representar um conjunto pequeno de
+                        moléculas, suas camadas eletrônicas e seus elétrons. Posteriormente, iremos aperfeiçoar nosso
+                        código, a fim de implementar e representar da melhor maneira possível as ligações iônicas, que
+                        são o foco central do nosso projeto.
+                    </p>
+
+                    <p>
+                        O programa funciona da seguinte maneira, ao iniciar o usuário deve pressionar a tecla ENTER em
+                        seu
+                        teclado para que seja direcionado para a tela de simulação, lá o usuário poderá visualizar duas
+                        esferas nos cantos esquerdo e direito de sua tela, uma em vermelho e a outra em azul
+                        representando núcleos genéricos. Para iniciar uma simulação o usuário deve primeiro escolher uma
+                        molécula clicando na janela com o botão direito do mouse, selecionando o menu SELECT A MOLECULE
+                        e então escolhendo uma das opções disponíveis. A tela será redesenhada para refletir o modelo
+                        atômico de Bohr para os dois átomos que compõem a molécula (um metal e outro não-metal), nesse
+                        modelo é possível observar a configuração eletrônica e distribuição de camadas para cada átomo
+                        individualmente. Para iniciar uma simulação e observar a ligação iônica entre os dois átomos
+                        basta clicar em START SIMULATION no menu. Quando uma simulação é iniciada é possível visualizar
+                        como um átomo cede elétrons para que outro alcance a estabilidade através da representação
+                        gráfica sendo possível inclusive visualizar a nova configuração eletrônica e distribuição de
+                        camadas para ambos os átomos. Durante a simulação os elétrons orbitam ao redor do núcleo para
+                        simular melhor o modelo atômico de Bohr.
+                    </p>
+
+                    <p>
+                        Para interromper uma simulação basta clicar em STOP SIMULATION no menu.
+                    </p>
+
+                    <p>
+                        No projeto os átomos são representados através de primitivas simples como arestas e polígonos. A
+                        câmera está disposta ortogonalmente em relação a cena para que os elementos gerados possam ser
+                        exibidos com precisão e sem distorções. O posicionamento dos elementos na tela foi feito através
+                        de transformações 2D utilizando operações de translação (glTranslatef( )), os núcleos estão
+                        absolutamente posicionados em relação ao viewport e as camadas assim como os elétrons que compõe
+                        a eletrosfera dos átomos estão posicionados em relação a cada núcleo. No caso dos elétrons temos
+                        uma operação adicional de transformação, uma operação de rotação (glRotate( )), que permite que
+                        os elétrons orbitem ao redor do núcleo conforme o eixo circular definido por uma das camadas.
+                    </p>
+                </article>
+            </section>
+
+            <section>
+                <h3>
+                    Implementação
+                </h3>
+
+                <article>
+                    <h4>Ferramentas de desenvolvimento</h4>
+                </article>
+
+                <article>
+                    <h4>Requisitos de sistema</h4>
+
+                    <ul>
+                        <li>Processador Intel ou AMD com 2 GHz ou mais rápido.</li>
+                        <li>Mínimo de 2GB de RAM.</li>
+                        <li>Placa gráfica com suporte ao OpenGL e multiple buffering.</li>
+                        <li>Monitor com resolução mínima de 1336 x 768 pixels.</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h4>Especificações técnicas</h4>
+
+                    <p>
+                        Este projeto requer a instalação do compilador GCC e da biblioteca FreeGLUT no sistema
+                        operacional Linux.
+                    </p>
+                </article>
+            </section>
+
+            <section>
                 <h3>
                     Conclusão
                 </h3>
 
                 <article>
                     <p>
-                        Nosso objetivo é criar uma modelagem utilizando os fundamentos de processamento gráfico aprendidos até então na disciplina,
-                        aplicando na área das ciências, mais especificamente sobre ligações iônicas, onde iremos simular a transferência de elétrons. 
-                        É importante ressaltar que esta é uma versão inicial de um projeto, sendo assim, não é esperado que o conteúdo apresentado aqui aborde todo o campo que será explorado.
-                        Apesar das dificuldades encontradas para simulação da transferência de elétrons das ligações iônicas,
-                        conseguimos representar de maneira satisfatória as moléculas, seus átomos separados, com suas camadas eletrônicas e elétrons. 
-                        A simulação e representação desta ligação química, tende a nos ajudar a compreender como ocorre este processo,
-                        visualmente, a transferência de elétrons é melhor exemplificada e a fixação do conteúdo explorado é melhor alcançada, 
-                        visto que o público alvo não é necessariamente composto de pessoas que tenham aprendido química básica em suas trajetórias.
+                        Nosso objetivo é criar uma modelagem utilizando os fundamentos de processamento gráfico
+                        aprendidos até então na disciplina,
+                        aplicando na área das ciências, mais especificamente sobre ligações iônicas, onde iremos simular
+                        a transferência de elétrons.
+                        É importante ressaltar que esta é uma versão inicial de um projeto, sendo assim, não é esperado
+                        que o conteúdo apresentado aqui aborde todo o campo que será explorado.
+                        Apesar das dificuldades encontradas para simulação da transferência de elétrons das ligações
+                        iônicas,
+                        conseguimos representar de maneira satisfatória as moléculas, seus átomos separados, com suas
+                        camadas eletrônicas e elétrons.
+                        A simulação e representação desta ligação química, tende a nos ajudar a compreender como ocorre
+                        este processo,
+                        visualmente, a transferência de elétrons é melhor exemplificada e a fixação do conteúdo
+                        explorado é melhor alcançada,
+                        visto que o público alvo não é necessariamente composto de pessoas que tenham aprendido química
+                        básica em suas trajetórias.
                     </p>
                 </article>
             </section>
@@ -216,34 +300,33 @@
 
                 <article>
                     <p>
-                        [1] MAILON. <b>O uso de simuladores virtuais para o ensino de Química</b>. [S. l.]. Disponível em:
-                        <a
-                            href="https://propi.ifto.edu.br/ocs/index.php/connepi/vii/paper/view/2641/">https://propi.ifto.edu.br/ocs/index.php/connepi/vii/paper/view/2641/
-                        Acesso em: 18 out 2022.
+                        [1] MAILON. <b>O uso de simuladores virtuais para o ensino de Química</b>. [S. l.]. Disponível
+                        em:
+                        <a href="https://propi.ifto.edu.br/ocs/index.php/connepi/vii/paper/view/2641/">https://propi.ifto.edu.br/ocs/index.php/connepi/vii/paper/view/2641/
+                            Acesso em: 18 out 2022.
                     </p>
 
                     <p>
                         [2] SAMPAIO. <b> A UTILIZAÇÃO DOS SIMULADORES VIRTUAIS PHET EM QUÍMICA NO 1º ANO DO ENSINO MÉDIO
-                        SOBRE BALANCEAMENTO DE EQUAÇÕES</b>.  [S. l.]. Disponível em:
-                        <a
-                            href="https://uerr.edu.br/eepe/ieepe/gt1/gt19.pdf/">https://uerr.edu.br/eepe/ieepe/gt1/gt19.pdf/
-                        Acesso em: 18 out 2022.
+                            SOBRE BALANCEAMENTO DE EQUAÇÕES</b>. [S. l.]. Disponível em:
+                        <a href="https://uerr.edu.br/eepe/ieepe/gt1/gt19.pdf/">https://uerr.edu.br/eepe/ieepe/gt1/gt19.pdf/
+                            Acesso em: 18 out 2022.
                     </p>
 
                     <p>
-                        
-                            LibreTexts CHEMISTRY. <b> Ionic and Covalente Bonds </b>. Disponível em:
+
+                        LibreTexts CHEMISTRY. <b> Ionic and Covalente Bonds </b>. Disponível em:
                         <a
                             href="https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Supplemental_Modules_(Organic_Chemistry)/Fundamentals/Ionic_and_Covalent_Bonds">
                             Acesso em: 19 out. 2022
-                        
+
                     </p>
 
                     <p>
-                        
-                            Khan Academy. <b>Ligações Químicas</b>. Disponível em: 
-                        <a 
-                           href="https://pt.khanacademy.org/science/biology/chemistry--of-life/chemical-bonds-and-reactions/a/chemical-bonds-article">
+
+                        Khan Academy. <b>Ligações Químicas</b>. Disponível em:
+                        <a
+                            href="https://pt.khanacademy.org/science/biology/chemistry--of-life/chemical-bonds-and-reactions/a/chemical-bonds-article">
                             Acesso em 20 out. 2022.
                         </a>
                     </p>
