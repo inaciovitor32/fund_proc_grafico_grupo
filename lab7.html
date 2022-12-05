@@ -24,7 +24,8 @@
            </p>
        </header>
  
-      
+       
+       
         <aside>
             <nav class="sitemap">
                 <ul>
@@ -111,148 +112,151 @@
                 </ul>
             </nav>
         </aside>
+
+ 
  
        <main>
            <a href="index.html" title="Voltar" class="back-button">
                <span class="back-icon"></span>
            </a>
  
-           <h1 class="title">Laboratorio 07 - Mapeamento de Textura</h1>
+           <h1 class="title">Laboratório 7 - Mapeamento de Textura</h1>
            <p>
                <i>
-                   Atualizado em 22/11/2022 ás 19:00
+                   Atualizado em 24/11/2022 ás 16:03
                </i>
            </p>
  
            <section>
-               <h3>Mapeamento de Textura</h3>
+               <h3>Introdução à Estrutura de OpenGL</h3>
  
                <article>
                    <p>
                        O Laboratório visa executar os projetos, e verificar os conceitos
-                       apresentados sobre: mapeamento de Textura.
+                       apresentados sobre: Mapeamento de Textura.
+                
                    </p>
+ 
+ 
+               </article>
+           </section>
+        
+           <section>
+           <h3> Introdução </h3>
+           <article>
+                <p>
+                    Nesta aula prática faz-se uma introdução aos os aspectos práticos de Mapeamento de
+Textura em objetos geométricos tridimensionais de computação gráfica através do OpenGL. </p>
+
+                <p>
+                    O mapeamento de textura (texture mapping) permite que voce cole uma imagem de
+uma parede de tijolos (por exemplo, obtido pelo scaneamento de uma foto real) num poligono
+e desenhar a parede inteira como sendo um único poligono. Por exemplo, quando a parede é
+vista em perspectiva, os tijolos podem se parecer mais pequenos à medida que a parede fica
+mais longe do ponto de visualização. Outros usos do mapeamento de textura incluem a
+pintura de vegetação em grandes poligonos representando o chão em simulação de voos;
+padroes de papel de parede; e texturas que fazem os poligonos se parecerem substancias
+naturais tais como marmore, madeira, ou tecido. As possibilidades sao infindáveis. Apesar de
+ser mais natural pensarmos em aplicar texturas sobre polígonos, as texturas também podem
+ser aplicadas em todas as primitivas – pontos, linhas, poligonos, bitmaps, imagens.</p>
+           </article>
+           </section>
+
+
+
+
+
+           <section>
+           <h3>Atividades</h3>
+
+           <article>
+               <p>
+                   Foi realizado o dowload e execução dos arquivos de código disponibilizados de Mapeamento de Textura.
+               </p>
+
+               <section>
+                   <h3>1°. Projeto: "checker.c"</h3>
+                   <img src="checker.png" alt="checker.cpp" class="lab_image">
+                   <p class="legenda"><i>Figura 1 - Resultado do código "checker.c".</i></p>
+                  
+                <h3>2°. Projeto: "texbind.c"</h3>
+                   <img src="texbind.png" alt="texbind.cpp" class="lab_image">
+                   <p class="legenda"><i>Figura 2 - Resultado do código "texbind.c".</i></p>
+      
+                <p>
+                    Respondendo as questões solicitadas.
+                    <i> Qual o resultado da utilização de dua texturas?</i>
+                    <i> Como seria possível aplicar ambas texturas num mesmo objeto</i>
+
+                    
+                    Todas as questões podem ser resolvidas analisando este pequeno recorte do código
+                    
+                    <i>Um mix de texturas</i>
+                    <i>Primeiro precisamos modificar o fragmente shader para selecionar as misturas, depois interpolar as unidades das misturas</i>
+                </p>  
+            </article>
+            </section>
+
+ 
+           <section>
+               <h3>Códigos Fonte</h3>
+ 
+               <article>
+                   <p>
+                       Foram realizados os dowloads, modificações e execuções dos arquivos de código de Mapeamento e Textura.
+                   </p>
+ 
+                   <section>
+                       <h3>Exercícios para Entregar</h3>
+                       <img src="texturaRGB.png" alt="Exercício 1 comandos" class="lab_image">
+                       <img src="texturaRGB1.png" alt="Exercício 1 comandos" class="lab_image">
+                       <p class="legenda"><i>Figura 4 - Resultado do Exercício 1.</i></p>
+                      
+                      
+                   </section>
+
+                   
+                      
+                           <h3>Analise e conclusão:</h3>
+ 
+                           <ul>
+                               <li> Utilizando os conceitos aprendidos na disciplina foi possivel aprofundar os fundamentos de
+                                   Mapeamento de textura utilizando a linguagem C++ e a biblioteca OpenGL.
+                               </li>
+ 
+                           </ul>
+                      
+ 
+                   </ul>
                </article>
            </section>
  
            <section>
-               <h3>Atividades</h3>
+               <h3>Códigos Fonte</h3>
  
                <article>
-                   <p>
-                       <b>
-                           Qual o resultado da utilização de duas texturas?
-                       </b>
-                   </p>
+                   <ul>
+                       <li>
+                            <a href="checker.cpp">lab7 - checker.cpp</a>
+                       </li>
+
+                       <li>
+                            <a href="texbind.cpp">lab7 - texbind.cpp</a>
+                       </li>
+
+                       <li>
+                        <a href="textureRGB.cpp">lab7 - textureRGB.cpp</a>
+                       </li>
+
+                       <li>
+                        <a href="textureRGB1.cpp">lab7 - textureRGB1.cpp</a>
+                       </li>
  
-                   <p>
-                      
-                   </p>
+                   </ul>
                </article>
  
-               <article>
-                   <p>
-                       <b>
-                           Como seria possível aplicar ambas texturas num mesmo objeto?
-                       </b>
-                   </p>
- 
-                   <p>
-                      
-                   </p>
-               </article>
- 
-               <article>
-                   <p>
-                       <b>
-                           O que é a textura utilizada?
-                       </b>
-                   </p>
- 
-                   <p>
-                      
-                   </p>
-               </article>
- 
-               <article>
-                   <p>
-                       <b>
-                           Porque foram definidas as normais?
-                       </b>
-                   </p>
- 
-                   <p>
-                      
-                   </p>
-               </article>
- 
-               <article>
-                   <p>
-                       <b>
-                           O que é o objeto desenhado?
-                       </b>
-                   </p>
- 
-                   <p>
-                      
-                   </p>
-               </article>
            </section>
  
-           <section>
-               <h3>Atividades - 3º Projeto</h3>
- 
-               <article>
-                   <p>
-                       <b>
-                           Quais os objetos desenhados?
-                       </b>
-                   </p>
- 
-                   <p>
-                       O objeto desenhado é um toroide com um pequeno cubo no centro.
-                   </p>
-               </article>
- 
-               <article>
-                   <p>
-                       <b>
-                           Como varia a posição da fonte de luz no programa?
-                       </b>
-                   </p>
- 
-                   <p>
-                       A luz varia quando o botão esquerdo do mouse é pressionado e a luz varia com a variação da
-                       posição do cubo circundando o toroide.
-                   </p>
-               </article>
-           </section>
- 
-           <section>
-               <h3>Análises e conclusão</h3>
- 
-               <article>
-                   <p>
-                       Utilizando os conceitos aprendidos na disciplina e modificando o código fonte fornecido em
-                       aula para a aplicação desses conceitos, foi possivel aprofundar os fundamentos de iluminação e
-                       shading utilizando a linguagem C++ e a biblioteca OpenGL.
-                   </p>
-               </article>
-           </section>
- 
-           <section>
-               <h3>Códigos fonte</h3>
- 
-               <article>
-                   <p>
-                       <ul>
-                           <li>
-                               <a href="light2.c">light2.c</a>
-                           </li>
-                       </ul>
-                   </p>
-               </article>
-           </section>
        </main>
  
        <footer>
