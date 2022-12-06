@@ -111,21 +111,373 @@
                 </ul>
             </nav>
         </aside>
- 
-        <main>
 
-<a href="index.html" title="Voltar" class="back-button">
+        <main>
+            <a href="index.html" title="Voltar" class="back-button">
                 <span class="back-icon"></span>
             </a>
 
-            <h1 class="title">Seminário 2 - Modelagem funcional</h1>
+            <h1 class="title">Seminário 2 - Relatório</h1>
             <p>
                 <i>
-                    Atualizado em 29/11/2022 ás 21:00
+                    Atualizado em 06/12/2022 ás 18:00
                 </i>
             </p>
 
-</main>
+            <section>
+                <h3>Introdução</h3>
+
+                <article>
+                    <p>
+                        Ligações iônicas são ligações químicas que ocorrem entre átomos quando estes reagem entre si a
+                        fim de alcançarem estabilidade eletrônica. Em ligações iônicas, um átomo de um metal cede
+                        definitivamente um ou mais elétrons para um átomo de um não metal ou hidrogênio. Nesse tipo de
+                        ligação os metais têm tendência a formar cátions e os não metais têm tendência a formar ânions.
+                        Sempre que um elemento necessitar doar ou receber elétrons para alcançar a estabilidade
+                        eletrônica, a ligação será do tipo iônica. A estabilidade eletrônica é definida conforme a regra
+                        do octeto, onde um átomo só atinge a estabilidade quando possuir 8 elétrons na camada de
+                        valência ou 2 no caso do hidrogênio, assim dessa forma o átomo fica com a mesma configuração
+                        eletrônica de um gás nobre tornando-se estável.
+                    </p>
+
+                    <img src="image5.jpg" width="500px">
+                    <p>
+                        <i>
+                            Figura 1 - Neste exemplo o átomo de sódio (Na) doa 1 elétron de valência para o átomo de
+                            Cloro (Cl).
+                        </i>
+                    </p>
+
+                    <p>
+                        Tendo esse ponto de partida teórico, o objetivo deste trabalho é a representação visual de
+                        ligações iônicas entre alguns átomos de metais e não metais, permitindo a visualização de alguns
+                        dos conceitos aqui apresentados. O programa a ser desenvolvido permitirá a escolha de dois
+                        átomos ligantes dentro de um conjunto pré-definido de elementos e através de gráficos gerados
+                        por computador, mostrar ao usuário a formação da ligação resultante entre os átomos selecionados
+                        conforme o modelo de Bohr, onde o átomo é visualmente descrito por uma esfera maciça ao centro
+                        representando o núcleo (prótons e nêutrons) e os elétrons representados por pequenos pontos
+                        orbitando ao redor do núcleo em círculos concêntricos no que se denomina como eletrosfera e está
+                        distribuída através das camadas K, L, M, N, O, P, Q.
+                    </p>
+
+                    <img src="image3.png" width="300px">
+                    <p>
+                        <i>
+                            Figura 2 - Representação de Bohr para o átomo de sódio (Na), no programa os átomos ligantes
+                            serão graficamente representados conforme o modelo de Bohr aqui exemplificado.
+                        </i>
+                    </p>
+
+                    <br>
+
+                    <img src="diagrama.png" width="700px">
+                    <p>
+                        <i>
+                            Figura 3 - Representação do fluxograma descrevendo a Modelagem Funcional do sistema.
+                        </i>
+                    </p>
+                </article>
+            </section>
+
+            <section>
+                <h3>Cenário</h3>
+
+                <article>
+                    <p>
+                        Estamos na sociedade da informação, e as novas tecnologias têm influenciado na forma de agir e
+                        aprender do ser humano. A rápida evolução tecnológica está gerando diversas formas de ensino
+                        apoiadas em um conjunto diversificado de recursos que favorecem a utilização da multimídia no
+                        processo de ensino e aprendizagem SAMPAIO [1]. Desta forma, cada vez mais o professor é cobrado
+                        quanto à interação da cultura digital no cotidiano escolar, para que tanto os professores como
+                        os alunos atuem na busca, seleção, organização e avaliação das informações.
+                        De acordo com estudo feito por MAILON[2] e publicado em um artigo “ os simuladores são uma
+                        ferramenta muito interessante para ser utilizada pelos professores é a informática, com o uso de
+                        computadores para os simuladores virtuais. Este estudo fora realizado através de revisão
+                        bibliográfica acerca do tema “simuladores virtuais”, em seguida fora ministrada uma aula com o
+                        uso de um simulador acerca do tema “densidade” para 17 alunos de uma turma do 1º ano do ensino
+                        médio da escola Aluízio Ferreira, situado no município de Ji-Paraná, estado de Rondônia, por fim
+                        os alunos responderam a um questionário estruturado com questões objetivas e discursivas. O uso
+                        dos simuladores foi muito bem aceito pelos alunos, de acordo com as frases destacadas nos
+                        formulários respondidos. “. Sendo assim, podemos observar a importância do desenvolvimento de
+                        ferramentas gráficas que auxiliem os professores no ensino das matérias na qual além de
+                        facilitar o processo de ensino , também facilita o processo de aprendizagem na qual motiva mais
+                        o aluno nos estudos da matéria e de acordo com os estudos realizados por SAMPAIO[1] e MAILON[2],
+                        são muito bem aceitos pelos alunos.
+                    </p>
+                </article>
+            </section>
+
+            <section>
+                <h3>
+                    Exploração da problemática
+                </h3>
+
+                <article>
+                    <p>
+                        Para visualizarmos os detalhes de uma ligação iônica, temos de conseguir simular o processo de
+                        transferência de elétrons. Para isto, utilizaremos o OpenGL e os conceitos básicos aprendidos em
+                        laboratório para a modelagem do nosso projeto. Com OpenGl, devemos conseguir construir o modelo
+                        que desejamos, utilizando de um pequeno conjunto de primitivas geométricas – pontos, linhas e
+                        polígonos. Também serão utilizadas as bibliotecas “primitivas” do OpenGL, GLU e GLUT.
+                        Primeiro vamos explicar detalhadamente o processo de uma ligação iônica, para isto iremos falar
+                        da formação de íons. Alguns átomos tornam-se mais estáveis ao ganhar ou perder um elétron por
+                        completo. Quando isso ocorre, os átomos formam íons. Existem dois tipos de íons: os cátions,
+                        íons positivos formados pela perda de elétrons e os ânions, íons negativos formados ao ganhar
+                        elétrons. Quando um átomo perde um elétron e outro átomo ganha este elétron, o processo é
+                        chamado de transferência de elétrons. As ligações iônicas são ligações formadas entre íons com
+                        cargas opostas. Por exemplo, o íon de sódio carregado positivamente e o íon cloreto carregado
+                        negativamente são atraídos um pelo outro para formar cloreto de sódio, ou comumente chamado de
+                        sal de mesa. O cloreto de sódio não consiste em apenas um íon de sódio e um de cloreto, ele
+                        contém diversos íons, disposto em um padrão 3D.
+                    </p>
+                </article>
+            </section>
+
+            <section>
+                <h3>Funcionamento do Projeto</h3>
+
+                <article>
+                    <p>
+                        Nesta segunda parte do projeto, focamos em dar continuidade na representação das moléculas iônicas ,manteve-se um conjunto reduzido de elementos químicos para conseguir focar mais na funcionalidade do software de  aprendizagem na qual, poderá ser utilizado como protótipo nos testes de aceitação dos usuários(alunos e professores) e demonstrando-se ser eficaz, poderá ser  facilmente adicionado mais elementos químicos.Dentre as melhorias do projeto 1 podemos citar a Manipulação de arquivos para a representação de imagens utilizando opengl, a adição de Agrupamento de sprites utilizando  Double Buffering e Mipmapping na qual ,utilizamos sequências de imagens otimizadas e pré-calculadas, cada uma das quais é uma representação de resolução progressivamente menor da anterior.
+                    </p>
+
+                    <p>
+                        O programa funciona da seguinte maneira, ao iniciar o usuário deve pressionar a tecla ENTER em seu teclado para que seja direcionado para a tela de simulação, lá o usuário poderá selecionar a molécula que irá ser simulada clicando com o botão direito do mouse no campo “choose molecule” aparecerá a opção de dua moléculas: fluoreto de sódio e cloreto de lítio.
+                        Após selecionar uma das moléculas, o usuário será direcionado para uma tela contendo um resumo das propriedades químicas, como por exemplo a massa molar,densidade e ponto de ebulição. 
+                        
+                    </p>
+
+                    <p>
+                        Na tela de visualização das propriedades da molécula,existe a opção de visualizar a simulação da troca de íons entre os átomos.Pressione o botão direito do mouse e clique na opção “simulation view” A tela será redesenhada para refletir o modelo atômico de Bohr para os dois átomos que compõem a molécula (um metal e outro não-metal), nesse modelo é possível observar a configuração eletrônica e distribuição de camadas para cada átomo individualmente. Para iniciar uma simulação e observar a ligação iônica entre os dois átomos basta clicar em START SIMULATION no menu. Quando uma simulação é iniciada é possível visualizar como um átomo cede elétrons para que outro alcance a estabilidade através da representação gráfica sendo possível inclusive visualizar a nova configuração eletrônica e distribuição de camadas para ambos os átomos. Durante a simulação os elétrons orbitam ao redor do núcleo para simular melhor o modelo atômico de Bohr. 
+                        Para interromper uma simulação basta clicar em STOP SIMULATION no menu.
+                        
+                    </p>
+
+                    <p>
+                        No projeto os átomos são representados através de primitivas simples como arestas e polígonos. A câmera está disposta ortogonalmente em relação a cena para que os elementos gerados possam ser exibidos com precisão e sem distorções. O posicionamento dos elementos na tela foi feito através de transformações 2D utilizando operações de translação (glTranslatef( )), os núcleos estão absolutamente posicionados em relação ao viewport e as camadas assim como os elétrons que compõe a eletrosfera dos átomos estão posicionados em relação a cada núcleo. No caso dos elétrons temos uma operação adicional de transformação, uma operação de rotação (glRotate( )), que permite que os elétrons orbitem ao redor do núcleo conforme o eixo circular definido por uma das camadas.
+                    </p>
+                </article>
+
+                <article>
+                    <h4>
+                        Capturas de tela
+                    </h4>
+
+                    <img src="project_F2_home.png">
+                    <p>
+                        <i>
+                            Figura 4 - Tela inicial do programa.
+                        </i>
+                    </p>
+
+                    <img src="cloreto_litio_propriedades.png">
+                    <p>
+                        <i>
+                            Figura 5 - Tela de seleção de moléculas de  cloreto de litio.
+                        </i>
+                    </p>
+
+                    <img src="floreto_sodio_propriedades.png">
+                    <p>
+                        <i>
+                            Figura 6 - Tela de seleção de moléculas de floreto de litio.
+                        </i>
+                    </p>
+
+                    <img src="floreto_sodio.png">
+                    <p>
+                        <i>
+                            Figura 7 - Tela exbindo a simulação de uma ligação iônica.
+                        </i>
+                    </p>
+                </article>
+            </section>
+
+            <section>
+                <h3>
+                    Implementação
+                </h3>
+
+                <article>
+                    <h4>Ferramentas de desenvolvimento</h4>
+
+                    <p>
+                        Este projeto foi inteiramente desenvolvido utilizando ferramentas livres e de código aberto.
+                    </p>
+
+                    <article>
+                        <h5>GCC</h5>
+
+                        <p>
+                            GNU Compiler Collection ou GCC é um conjunto de compiladores desenvolvidos pelo projeto GNU
+                            e que oferecem suporte nativo às linguagens C, C + +, Objective-C, Ada, Java e Treelang. O
+                            GCC é um software livre e é o compilador padrão do sistema operacional Linux (que foi
+                            utilizado para o desenvolvimento do projeto). O GCC também está disponível para a utilização
+                            em outros sistemas operativos sejam eles livres ou proprietários. No Linux o GCC é utilizado
+                            no desenvolvimento do próprio sistema operacional e de todas as ferramentas nele
+                            disponíveis, incluindo a pilha gráfica responsável por renderizar gráficos computadorizados
+                            na tela do usuário.
+                        </p>
+                    </article>
+
+                    <article>
+                        <h5>Make</h5>
+
+                        <p>
+                            O GNU Make é uma ferramenta de desenvolvimento utilizada para orquestrar e automatizar
+                            processos de compilação utilizando o GCC.
+                            O make opera através de regras definidas pelo desenvolvedor que descrevem como compilar cada
+                            arquivo fonte do projeto e como estes arquivos se interligam, garantindo que todos os
+                            arquivos são compilados e que todas as dependências do projeto são satisfeitas. Outra
+                            funcionalidade dessa ferramenta é otimizar o processo de compilação, pois a ferramenta é
+                            “inteligente” o bastante para somente recompilar aqueles arquivos fonte onde houveram
+                            mudanças e ignorar o que se mantém igual. Além disso, o Make serve para facilitar a
+                            configuração e instalação de projetos desenvolvidos nas linguagens C e C + +.
+                        </p>
+                    </article>
+
+                    <article>
+                        <h5>
+                            OpenGL (Mesa)
+                        </h5>
+
+                        <p>
+                            OpenGL é uma API de rotinas gráficas de modelagem, manipulação de objetos e exibição 2D e
+                            3D, que permite a criação de aplicações que usam computação gráfica e que faz parte da pilha
+                            gráfica do sistema operacional Linux. No Linux essa API é implementada através do driver de
+                            dispositivo Mesa, uma implementação de software livre da especificação OpenGL e que permite
+                            a programas desenvolvidos para o sistema operacional a exibição de gráficos gerados por
+                            computador. O driver Mesa pode permitir a exibição de gráficos acelerados por hardware
+                            fazendo uso da arquitetura DRI, obtendo acesso direto ao hardware gráfico e sua
+                            implementação da API OpenGL.
+                        </p>
+                    </article>
+
+                    <article>
+                        <h5>
+                            FreeGLUT
+                        </h5>
+
+                        <p>
+                            GLUT, abreviação de OpenGL Utility Toolkit é um conjunto de bibliotecas de extensão
+                            disponíveis para uso através do sistema operacional.
+                            O OpenGL não suporta diretamente nenhuma forma de exibição de janelas e widgets como menus e
+                            botões e tão pouco suporta métodos de entrada como teclado e mouse e por isso, para o uso
+                            dessas funcionalidades foi utilizada a biblioteca FreeGLUT, uma implementação de software
+                            livre da biblioteca GLUT.
+                        </p>
+
+                        <h5>
+                            FILE
+                        </h5>
+
+                        <p>
+                            As operações de entrada e saída do C, incluindo as relacionadas a arquivos, encontram-se na biblioteca stdio.h. Essa biblioteca também define várias macros, dentre elas NULL e EOF, que definem um ponteiro nulo e o fim de arquivo, respectivamente. Além disso, é nela que está definido o tipo FILE na qual é responsável no controle da manipulação de arquivos em C.
+                        </p>
+                    </article>
+                </article>
+
+                <article>
+                    <h4>Requisitos de sistema</h4>
+
+                    <p>
+                        Recomenda-se um computador com o sistema operacional Ubuntu e as seguintes configurações para a
+                        execução do projeto:
+                    </p>
+
+                    <ul>
+                        <li>Processador Intel ou AMD com 2 GHz ou mais rápido.</li>
+                        <li>Mínimo de 2GB de RAM.</li>
+                        <li>Placa gráfica com suporte ao OpenGL e multiple buffering.</li>
+                        <li>Monitor com resolução mínima de 1336 x 768 pixels.</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h4>Especificações técnicas</h4>
+
+                    <p>
+                        Este projeto requer a instalação do compilador GCC e da biblioteca FreeGLUT no sistema
+                        operacional Linux. O projeto tem como dependências de desenvolvimento os seguintes pacotes que
+                        podem ser instalados através do gerenciador APT nas distribuições Debian e Ubuntu:
+                    </p>
+
+                    <img src="bash.png" alt="Guia de Instalação" width="500px">
+                    <p>
+                        <i>
+                            Figura 8 - Comandos para a configuração do ambiente de desenvolvimento do projeto.
+                        </i>
+                    </p>
+                </article>
+            </section>
+
+            <section>
+                <h3>
+                    Conclusão
+                </h3>
+
+                <article>
+                    <p>
+                        Nosso objetivo foi criar uma modelagem utilizando os fundamentos de processamento gráfico aprendidos na disciplina, aplicando na área das ciências, mais especificamente no ensino de química sobre ligações iônicas para alunos do ensino médio e vestibulandos. O projeto  tem como objetivo  simular a transferência de elétrons em ligações químicas iônicas . É importante ressaltar que esta é uma versão inicial do projeto (protótipo), sendo assim, o projeto necessita de algumas melhorias e não é esperado que o conteúdo apresentado aqui aborde todas as ligações iônicas. Apesar das dificuldades encontradas para simulação da transferência de elétrons das ligações iônicas, conseguimos representar de maneira satisfatória as moléculas, seus átomos separados, com suas camadas eletrônicas e elétrons. Devido a complexidade da simulação das ligações químicas, manteve-se um conjunto reduzido de elementos químicos para conseguir focar mais na funcionalidade do software de  aprendizagem na qual, poderá ser utilizado como protótipo nos testes de aceitação dos usuários(alunos e professores) e demonstrando-se ser eficaz, poderá ser  facilmente adicionado mais elementos químicos. É esperado que a simulação e representação destas ligações químicas, ajude os alunos a compreender como ocorre este processo de transferência de íons, visualmente, ajudando na explicação e fixação do conteúdo.
+                    </p>
+                </article>
+            </section>
+
+            <section>
+                <h3>Guia de uso</h3>
+
+                <a href="guia2.pdf">
+                    Download
+                </a>
+            </section>
+
+            <section>
+                <h3>Código Fonte</h3>
+
+                <article>
+                    <a href="proj_fpg2.zip">
+                        Download
+                    </a>
+                </article>
+            </section>
+
+            <section>
+                <h3>Referências</h3>
+
+                <article>
+                    <p>
+                        [1] MAILON. <b>O uso de simuladores virtuais para o ensino de Química</b>. [S. l.]. Disponível
+                        em:
+                        <a href="https://propi.ifto.edu.br/ocs/index.php/connepi/vii/paper/view/2641/">https://propi.ifto.edu.br/ocs/index.php/connepi/vii/paper/view/2641/
+                            Acesso em: 18 out 2022.
+                    </p>
+
+                    <p>
+                        [2] SAMPAIO. <b> A UTILIZAÇÃO DOS SIMULADORES VIRTUAIS PHET EM QUÍMICA NO 1º ANO DO ENSINO MÉDIO
+                            SOBRE BALANCEAMENTO DE EQUAÇÕES</b>. [S. l.]. Disponível em:
+                        <a href="https://uerr.edu.br/eepe/ieepe/gt1/gt19.pdf/">https://uerr.edu.br/eepe/ieepe/gt1/gt19.pdf/
+                            Acesso em: 18 out 2022.
+                    </p>
+
+                    <p>
+                        LibreTexts CHEMISTRY. <b> Ionic and Covalente Bonds </b>. Disponível em:
+                        <a
+                            href="https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Supplemental_Modules_(Organic_Chemistry)/Fundamentals/Ionic_and_Covalent_Bonds">
+                            Acesso em: 19 out. 2022
+
+                    </p>
+
+                    <p>
+                        Khan Academy. <b>Ligações Químicas</b>. Disponível em:
+                        <a
+                            href="https://pt.khanacademy.org/science/biology/chemistry--of-life/chemical-bonds-and-reactions/a/chemical-bonds-article">
+                            Acesso em 20 out. 2022.
+                        </a>
+                    </p>
+                </article>
+            </section>
+        </main>
+
         <footer>
             <p>2022 - Universidade Federal do ABC</p>
         </footer>
